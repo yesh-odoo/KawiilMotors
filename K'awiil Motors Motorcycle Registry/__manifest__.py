@@ -8,7 +8,7 @@
     'license': 'OPL-1',
     'author': 'yesh-odoo',
     'version': '0.0.1',
-    'category':  'Customizations/Custom Modules',
+    'category':  'Customizations/Kawaiil',
     'website': 'www.odoo.com',
     'category': 'Custom Modules/Tech Training',
     'depends': ['base'],
