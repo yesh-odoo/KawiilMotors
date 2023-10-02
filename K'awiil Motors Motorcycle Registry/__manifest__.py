@@ -1,13 +1,14 @@
 {
-    'name': 'Odoo Library',
-    'summary': """Module to handle Books and Lending Information.""",
-    'description': """Module to handle:
-        - Books
-        - Lending
-        - Students
-        """,
+    'name': 'motorcycle_registry',
+    'summary': """Manage Registration of Motorcycles.""",
+    'description': """Motorcycle Registry
+    ====================
+    This Module is used to keep track of the Motorcycle Registration and Ownership of each motorcycle of the brand.
+    """,
     'license': 'OPL-1',
-    'author': 'yesh',
+    'author': 'yesh-odoo',
+    'version': '0.0.1',
+    'category':  'Kawiil/Custom Modules',
     'website': 'www.odoo.com',
     'category': 'Custom Modules/Tech Training',
     'depends': ['base'],
