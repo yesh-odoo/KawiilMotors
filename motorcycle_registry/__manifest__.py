@@ -1,5 +1,5 @@
 {
-    'name': 'motorcycle_registry',
+    'name': "K'awiil Motors Motorcycle Registry",
     'summary': """Manage Registration of Motorcycles.""",
     'description': """Motorcycle Registry
     ====================
