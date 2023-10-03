@@ -11,7 +11,10 @@
     'category':  'Kawaiil/',
     'website': 'www.odoo.com',
     'depends': ['base'],
-    'data': [],
+    'data': [
+        'security/motorcycle_registry_groups.xml',
+        'security/ir.model.access.csv'
+    ],
     'demo': [
         'demo/motorcycle_registry_demo.xml',
     ],
