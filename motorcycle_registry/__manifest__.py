@@ -12,6 +12,8 @@
     'website': 'www.odoo.com',
     'depends': ['base'],
     'data': [],
-    'demo': [],
+    'demo': [
+        'demo/motorcycle_registry_demo.xml',
+    ],
     'application': True,
 }
