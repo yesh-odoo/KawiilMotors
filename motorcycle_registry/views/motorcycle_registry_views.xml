@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="registry_view_form" model="ir.ui.view">
+     <field name="name">registry.view.form</field>
+     <field name="model">motorcycle.registry</field>
+     <field name="arch" type="xml">
+        <form string="Registry view">
+            <header></header>
+            <sheet>
+                <h1><field name="registry_number"/></h1>
+                <group>
+                    <group>
+                        <separator string="Vehicle Image"/>
+                        <field name="vehicle_image"/>
+                    </group>
+                    <group>
+                        <separator string="Registry Information"/>
+                        <field name="vin"/>
+                    </group>
+                </group>
+                <notebook>
+                    <page string="Milage">
+                        <field name="current_mileage"/>
+                    </page>
+                </notebook>    
+            </sheet>
+        </form>
+     </field>
+    </record>
+
+    <record id="registry_view_list" model="ir.ui.view">
+     <field name="name">registry.view.list</field>
+     <field name="model">motorcycle.registry</field>
+     <field name="arch" type="xml">
+        <tree string="Registry List">
+            <field name="first_name"/>
+            <field name="last_name"/>
+            <field name="registry_number"/>
+            <field name="license_plate"/>
+            <field name="vin"/>
+        </tree>
+     </field>
+    </record>
+
+    <record id="registry_view_search" model="ir.ui.view">
+     <field name="name">registry.view.search</field>
+     <field name="model">motorcycle.registry</field>
+     <field name="arch" type="xml">
+        <search>
+            <field name="last_name"/>
+            <field name="registry_number"/>
+            <field name="license_plate"/>
+            <field name="vin"/>
+            <filter name="date_registry" string="Date Registry" context="{'group_by': 'date_registry'}"/>
+        </search>
+     </field>
+    </record>
+</odoo>
