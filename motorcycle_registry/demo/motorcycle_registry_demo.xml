@@ -19,7 +19,6 @@
             <field name="last_name">Han</field>
             <field name="registry_number">003</field>
             <field name="current_mileage">23250</field>
-            <field name="date_registry" eval="(Date.today() - relativedelta(months=1)).strftime('%Y-%m-%d')"/>
         </record>
     </data>
 </odoo>
