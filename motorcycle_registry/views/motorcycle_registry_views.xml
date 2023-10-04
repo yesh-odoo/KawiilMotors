@@ -5,17 +5,19 @@
      <field name="model">motorcycle.registry</field>
      <field name="arch" type="xml">
         <form string="Registry view">
-            <header></header>
+            <header/>
             <sheet>
                 <h1><field name="registry_number"/></h1>
                 <group>
                     <group>
                         <separator string="Vehicle Image"/>
                         <field name="vehicle_image"/>
+                        <field name="vin"/>
                     </group>
                     <group>
-                        <separator string="Registry Information"/>
-                        <field name="vin"/>
+                        <separator string="Owner Information"/>
+                        <field name="first_name"/>
+                        <field name="last_name"/>
                     </group>
                 </group>
                 <notebook>
