@@ -18,6 +18,12 @@ class MotorcycleRegistry(models.Model):
     certificate_title = fields.Binary(attachment=True)
     vehicle_image = fields.Image("Vehicle Image", max_width=1920, max_height=1920)
     registry_number = fields.Char(string="Registry Number", required=True, default="MRN0001", copy=False, readonly=True)
+    owner_id = fields.Many2one('res.partner', string='Owner')
+    email = fields.Char(string='Email', related='owner_id.email')
+    phone = fields.Char(string='Phone', related='owner_id.phone')
+    make = fields.Char(string='Make', compute='_compute_make_model_year', store=True)
+    model = fields.Char(string='Model', compute='_compute_make_model_year', store=True)
+    year = fields.Char(string='Year', compute='_compute_make_model_year', store=True)
 
     @api.model
     def create(self, vals):
@@ -47,3 +53,11 @@ class MotorcycleRegistry(models.Model):
                 existing_records = self.env['motorcycle.registry'].search([('vin', '=', record.vin)])
                 if len(existing_records) > 1:
                     raise ValidationError("A Motorcycle Registry with the same VIN already exists. Each VIN must be unique.")
+
+    @api.depends('vin')
+    def _compute_make_model_year(self):
+        for record in self:
+            if record.vin and len(record.vin) >= 7:
+                record.make = record.vin[0:2]
+                record.model = record.vin[2:4]
+                record.year = record.vin[4:6]
