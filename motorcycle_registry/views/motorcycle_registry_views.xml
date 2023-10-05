@@ -10,14 +10,29 @@
                 <h1><field name="registry_number"/></h1>
                 <group>
                     <group>
+<<<<<<< HEAD
+                        <separator string="Vehicle Information"/>
+                        <field name="vehicle_image"/>
+                        <field name="vin"/>
+                        <field name="make"/>
+                        <field name="model"/>
+                        <field name="year"/>
+=======
                         <separator string="Vehicle Image"/>
                         <field name="vehicle_image"/>
                         <field name="vin"/>
+>>>>>>> Stg-dev
                     </group>
                     <group>
                         <separator string="Owner Information"/>
                         <field name="first_name"/>
                         <field name="last_name"/>
+<<<<<<< HEAD
+                        <field name="owner_id"/>
+                        <field name="email"/>
+                        <field name="phone"/>
+=======
+>>>>>>> Stg-dev
                     </group>
                 </group>
                 <notebook>
