@@ -25,7 +25,6 @@ class MotorcycleRegistry(models.Model):
     model = fields.Char(string='Model', compute='_compute_make_model_year', store=True)
     year = fields.Char(string='Year', compute='_compute_make_model_year', store=True)
 
-
     @api.model
     def create(self, vals):
         if vals.get('registry_number', ('MRN0001')) == ('MRN0001'):
